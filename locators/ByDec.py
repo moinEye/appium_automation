@@ -16,8 +16,8 @@ desired_caps['appActivity'] = 'com.code2lead.kwad.MainActivity'
 driver = webdriver.Remote("http://localhost:4723/wd/hub", desired_caps)
 
 
-ele_id = driver.find_element(AppiumBy.ID, "com.code2lead.kwad:id/EnterValue")
-ele_id.click()
+ele_index = driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'UiSelector().description("Btn3")')
+ele_index.click()
 
 
 
