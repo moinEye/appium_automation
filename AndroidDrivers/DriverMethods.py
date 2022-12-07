@@ -2,7 +2,7 @@ from appium import webdriver
 
 desired_caps = {}
 desired_caps['platformName'] = 'Android'
-desired_caps ['automationName'] = 'UiAutomator2'
+desired_caps['automationName'] = 'UiAutomator2'
 desired_caps['platformVersion'] = '11'
 desired_caps['deviceName'] = 'samsung SM-M015G'
 desired_caps['app'] = ('/home/moin/Downloads/Appium/Android_Demo_App.apk')
