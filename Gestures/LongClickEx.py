@@ -1,3 +1,5 @@
+from datetime import time
+
 from appium import webdriver
 from appium.webdriver import appium_service
 from appium.webdriver.common.appiumby import AppiumBy
@@ -22,12 +24,20 @@ wait = WebDriverWait(driver, 25, poll_frequency=1,
                      ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException,
                                          NoSuchElementException])
 
-ele = wait.until(lambda x: x.find_element(AppiumBy.ID, "com.code2lead.kwad:id/ScrollView"))
-ele.click()
-
 ele = wait.until(lambda x: x.find_element(AppiumBy.ANDROID_UIAUTOMATOR,
-                                          'new UiScrollable(new UiSelector()).scrollIntoView(text("BUTTON12"))'))
-ele.click()
+                                          'new UiScrollable(new UiSelector()).scrollIntoView(text("LONG CLICK"))'))
+actions = TouchAction(driver)
+actions.long_press(ele,5)
+actions.perform()
 
 time.sleep(4)
 driver.quit()
+
+
+
+
+
+
+
+
+
